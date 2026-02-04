@@ -5,6 +5,8 @@
 ## GOAL OF THE DAY:
 -Strengthen Python fundamentals for DevOps
 -Practice Python basics (variables, loops, conditionals, functions)
+-Learned about Virtual Environment
+-And also its importance, and how to create a Virtual Environment
 -Work with Python data structures (mainly List & Dictionary)
 -Do hands-on practice using data structures
 -Start understanding how Python is used in DevOps
@@ -24,6 +26,21 @@ Today, I focused mainly on Python and moved from revising basics to exploring ho
 2. Wrote small programs using:
   - Conditions inside loops
   - Functions with inputs and outputs
+    
+
+-> Python Virtual Environment(venv):
+
+1. Learned what a virtual environment is:
+  - Creating
+  - Activating
+  - Deactivating
+  - Installation of Packages inside venv using pip
+
+3. Understood why venv is important:
+  - Isolate project dependencies
+  - Avoid version conflicts
+  - Keep the system Python clean
+  - Different projects can use different library versions
  
 
 -> Python Data Structures (Hands-on): [*Understood how lists and dictionaries are widely used in automation scripts.*]
@@ -61,6 +78,7 @@ Today, I focused mainly on Python and moved from revising basics to exploring ho
 ## WHAT I LEARNED TODAY:
  - Python basics are the foundation for automation
  - Lists and dictionaries are extremely important in DevOps scripts
+ - Virtual Environments are essential for managing Python project dependencies
  - Python can interact with external services using APIs
  - DevOps engineers use Python heavily for automation and tooling
 
