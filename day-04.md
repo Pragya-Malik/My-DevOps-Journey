@@ -44,19 +44,19 @@
 -> Every Linux command returns an exit code:
     0 → Success
     Non-zero → Failure
-    Example: echo $? # Shows last command exit status
+    Example: echo $?    # Shows last command exit status
 -> Basic error handling:
     if [ $? -ne 0 ]; then
     echo "Command failed."
     exit 1
     fi
 ->Better approach:
-     set -e # Exit immediately if any command fails
+     set -e     # Exit immediately if any command fails
      Custom error handling:
      command || { echo "Failed"; exit 1; }
     *This is critical in CI/CD pipelines where failure must stop execution.*
 
-3. Functions and Arguments:
+4. Functions and Arguments:
 ->Function definition:
     my_function() {
     echo "Hello $1"
