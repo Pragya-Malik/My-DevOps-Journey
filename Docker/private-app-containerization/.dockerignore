@@ -1,1 +1,54 @@
+# Dependencies
 
+node_modules
+npm-debug.log
+
+# Build output
+
+.next
+dist
+build
+
+# Environment files
+
+.env
+.env.local
+.env.*.local
+
+# Git
+
+.git
+.gitignore
+
+# OS/editor
+
+.DS_Store
+Thumbs.db
+
+# Logs
+
+logs
+*.log
+
+# Docker (avoid copying repo Docker artifacts if needed)
+
+docker-compose.yml
+
+# Screenshots/docs (not needed inside image)
+
+screenshots
+README.md
+
+
+
+
+
+## Its importance:
+ - Prevents large image size
+ - Improvest build speed
+ - Avoids leaking secrets (.env)
+ - Shows professional practice
+
+## Important clarity:
+ -> .dockerignore controls what gets copied into the image during COPY . . 
+ -> Without it, you accidentally copy everything.
