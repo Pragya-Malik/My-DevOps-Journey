@@ -1,0 +1,63 @@
+*-- TRANSITION TO DOCKER + REAL AUTOMATION THINKING --*
+
+## GOALS:
+
+ - Understand the basics of Docker
+ - Begin practical containerization
+ - Write Dockerfiles for projects
+ - Understand Docker image build process
+ - Run containers and manage lifecycle
+ - Learn basic Docker commands workflow
+ - Understand why containers improve reproducibility
+ - Introduce the Docker Compose concept
+
+
+   
+## OUTPUT/RESULT:
+   
+ -> Containerized Projects:
+  - Containerized 2–3 small projects using Docker
+  - Wrote multiple Dockerfiles for different applications
+  - Built images and ran containers locally
+  - Practiced image rebuild workflow
+
+-> Dockerfile Understanding:
+  - Learned the structure of Dockerfile (FROM, WORKDIR, COPY, RUN, CMD)
+  - Understood image layers and caching
+  - Understoood importance of small images
+
+-> Docker Workflow:
+  - docker build
+  - docker run
+  - docker ps
+  - docker logs
+  - docker exec
+
+-> Introduction to Docker Compose: 
+  - Created first docker-compose.yml
+  - Understood service definition concept
+  - Learned why Compose simplifies multi-container apps
+    
+
+## KEY LEARNING:
+
+ - Containers package application + dependencies
+ - Dockerfile is infrastructure as code for the runtime environment
+ - Container lifecycle management is an essential debugging skill
+ - Compose simplifies multi-service orchestration
+ - Containerization moves DevOps toward reproducible environments
+
+
+
+## Repository Structure Improvements:
+-> Introduced a dedicated scripts/ directory to store shell automation scripts separately from learning notes.
+-> Created a docker/ directory to organize Dockerfiles and Docker Compose configurations.
+-> Established a clear separation between journal entries, automation scripts, and container configuration.
+-> Structured the repository to support future DevOps projects and scalability.
+
+
+
+    
+
+
+  
