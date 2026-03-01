@@ -7,7 +7,8 @@ on:
   # jb bhi mei push kru 
   push:
     # kisi particular brance pe
-    branches: [main]
+    branches:
+        - main
 
 
 # these are jobs inside the workflow
@@ -22,7 +23,6 @@ jobs:
             # name of the step
             - name: Say hello to users
               run: echo "Hello Everyone!"
-              
             - name: Say hello tp username
               run: echo "Hello $USER"
               
