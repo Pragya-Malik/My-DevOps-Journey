@@ -1,0 +1,31 @@
+# name of the workflow
+name: Hello Workflow
+
+
+# when this workflow will work?
+on:
+  # jb bhi mei push kru 
+  push:
+    # kisi particular brance pe
+    branches:
+        - main
+
+
+# these are jobs inside the workflow
+jobs:
+    # this is the first job with name greet
+    greet:
+        # yeh workflows kidhr chlenge?
+        runs-on: ubuntu-latest
+        # steps of the job
+        steps:
+        
+            # name of the step
+            - name: Say hello to users
+              run: echo "Hello Everyone!"
+            - name: Say hello tp username
+              run: echo "Hello $USER"
+              
+
+
+    
