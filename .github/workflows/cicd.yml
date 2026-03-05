@@ -16,7 +16,7 @@ jobs:
             - name: build docker container
               run: echo "Docker container successfully build"
     test:
-        needs: build
+        needs: [code, build]
         runs-on: ubuntu-latest
         steps:
             - name: Testing the container
