@@ -1,7 +1,11 @@
-name: Portfolio
+name: My Portfolio
+
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+    paths:
+      - "**.html"
 
 permissions:
   pages: write
