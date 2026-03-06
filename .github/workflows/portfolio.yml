@@ -16,6 +16,7 @@ jobs:
 
     environment:
       name: github-pages
+      url: ${{ steps.deployment.outputs.pages_url }}
 
     steps:
       - name: Checkout Code
@@ -29,6 +30,9 @@ jobs:
 
       - name: Upload static files
         uses: actions/upload-pages-artifact@v4
+        with:
+          path: .
 
       - name: Deploy pages
+        id: deployment
         uses: actions/deploy-pages@v4
