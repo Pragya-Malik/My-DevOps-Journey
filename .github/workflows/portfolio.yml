@@ -1,0 +1,32 @@
+name: Portfolio
+on:
+  push:
+    branches: [main]
+
+permissions:
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on:
+      - ubuntu-latest
+
+    environment:
+      name: github-pages
+
+    steps:
+      - name: Checkout Code
+        # This actions check-out your repo under $GITHUB_WORKPLACE, so your workflow can access it
+        # Get access to your portfolio code
+        # Clone or checks out the code where this workflow is written
+        uses: actions/checkout@v4
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload static files
+        uses: actions/upload-pages-artifact@v4
+
+      - name: Deploy pages
+        uses: actions/deploy-pages@v4
