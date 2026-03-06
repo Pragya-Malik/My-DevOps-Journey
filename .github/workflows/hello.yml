@@ -4,11 +4,7 @@ name: Hello Workflow
 
 # When will this workflow work?
 on:
-  # jb bhi mei push kru 
-  push:
-    # kisi particular brance pe
-    branches:
-        - main
+  workflow_dispatch: 
 
 
 # these are jobs inside the workflow
