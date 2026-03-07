@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pragya | DevOps Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+scroll-behavior:smooth;
+}
+
+header{
+position:fixed;
+width:100%;
+top:0;
+background:#020617;
+padding:15px 60px;
+z-index:1000;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+color:#38bdf8;
+}
+
+.nav-links{
+list-style:none;
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#38bdf8;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:55px;
+}
+
+.hero h3{
+color:#38bdf8;
+margin:10px 0;
+}
+
+.hero p{
+max-width:600px;
+margin:auto;
+opacity:0.8;
+}
+
+.hero button{
+margin-top:20px;
+padding:12px 28px;
+border:none;
+background:#38bdf8;
+color:black;
+font-weight:600;
+cursor:pointer;
+border-radius:6px;
+transition:0.3s;
+}
+
+.hero button:hover{
+background:#0ea5e9;
+}
+
+.section{
+padding:100px 10%;
+text-align:center;
+}
+
+.section h2{
+font-size:36px;
+margin-bottom:30px;
+}
+
+.skills-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
+}
+
+.skill-card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.skill-card:hover{
+transform:translateY(-5px);
+background:#38bdf8;
+color:black;
+}
+
+.project-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.project-card{
+background:#1e293b;
+padding:25px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:translateY(-8px);
+}
+
+.project-card a{
+display:inline-block;
+margin-top:15px;
+color:#38bdf8;
+text-decoration:none;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#020617;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<h2 class="logo">Pragya</h2>
+
+<ul class="nav-links">
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div>
+
+<h1>Hi, I'm Pragya</h1>
+
+<h3>DevOps & Cloud Enthusiast</h3>
+
+<p>
+MCA student learning DevOps tools like Linux, Docker, GitHub,
+and CI/CD automation pipelines.
+</p>
+
+<button onclick="scrollToProjects()">View Projects</button>
+
+</div>
+
+</section>
+
+
+
+<section id="about" class="section">
+
+<h2>About Me</h2>
+
+<p>
+I am currently learning DevOps and Cloud technologies.
+My focus is on automation, containerization, and CI/CD pipelines.
+
+Tools I work with include Linux, Shell scripting, Docker,
+GitHub Actions, and networking fundamentals.
+</p>
+
+</section>
+
+
+
+<section id="skills" class="section">
+
+<h2>Skills</h2>
+
+<div class="skills-container">
+
+<div class="skill-card">Linux</div>
+<div class="skill-card">Shell Scripting</div>
+<div class="skill-card">Git & GitHub</div>
+<div class="skill-card">Docker</div>
+<div class="skill-card">CI/CD</div>
+<div class="skill-card">GitHub Actions</div>
+<div class="skill-card">Networking</div>
+
+</div>
+
+</section>
+
+
+
+<section id="projects" class="section">
+
+<h2>Projects</h2>
+
+<div class="project-container">
+
+<div class="project-card">
+
+<h3>CI/CD Pipeline Project</h3>
+
+<p>
+Built an automated CI/CD pipeline using GitHub Actions
+that builds and deploys an application.
+</p>
+
+<a href="#">GitHub Repo</a>
+
+</div>
+
+
+<div class="project-card">
+
+<h3>Docker Container Project</h3>
+
+<p>
+Containerized a sample application using Docker and ran
+it using container networking.
+</p>
+
+<a href="#">GitHub Repo</a>
+
+</div>
+
+
+<div class="project-card">
+
+<h3>Linux Automation Scripts</h3>
+
+<p>
+Created bash scripts to automate system monitoring
+and server management tasks.
+</p>
+
+<a href="#">GitHub Repo</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="contact" class="section">
+
+<h2>Contact</h2>
+
+<p>Email: your-email@example.com</p>
+<p>GitHub: github.com/yourusername</p>
+<p>LinkedIn: linkedin.com/in/yourprofile</p>
+
+</section>
+
+
+
+<footer>
+
+<p>© 2026 Pragya | DevOps Portfolio</p>
+
+</footer>
+
+
+
+<script>
+
+function scrollToProjects(){
+document.getElementById("projects").scrollIntoView({
+behavior:"smooth"
+});
+}
+
+</script>
+
+
+</body>
+</html>
