@@ -1,43 +1,40 @@
 name: CICD
 on:
-    # manual click delivery of workflow whenever needed
-    workflow_dispatch: 
-        inputs:
-            environment:
-                description: environment values where this workflow runs
-                default: 'dev'
-                required: true
-                type: choice
-                options:
-                    - dev
-                    - prod
-                    - staging
-       
+  # manual click delivery of workflow whenever needed
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: environment values where this workflow runs
+        default: "dev"
+        required: true
+        type: choice
+        options:
+          - dev
+          - prod
+          - staging
+
 jobs:
-    code:
-        runs-on: ubuntu-latest
-        steps:
-            - name: checkout code
-              run: echo "Code clone from GitHub"
-    build:
-        needs: code
-        runs-on: ubuntu-latest
-        steps:
-            - name: build docker container
-              run: echo "Docker container successfully build"
-    test:
-        if: inputs.environment == 'prod'
-        needs: [code, build]
-        runs-on: ubuntu-latest
-        steps:
-            - name: Testing the container
-              run: echo "Testing the container"
-    deploy: 
-        needs: [build,test]
-        runs-on: ubuntu-latest
-        steps:
-            - name: deploying the app
-              run: echo "Docker compose deploy the app"
-    
-    
-    
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        run: echo "Code clone from GitHub"
+  build:
+    needs: code
+    runs-on: ubuntu-latest
+    steps:
+      - name: build docker container
+        run: echo "Docker container successfully build"
+  test:
+    if: inputs.environment == 'prod'
+    needs: [code, build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testing the container
+        run: echo "Testing the container"
+  deploy:
+    needs: [build, test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploying the app
+        run: echo "Docker compose deploy the app"
