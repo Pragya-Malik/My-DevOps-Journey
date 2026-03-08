@@ -25,17 +25,14 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: install test dependencies
-        run: pip install pytest
-
-      - name: run tests
-        run: pytest
-
       - name: install dependencies
         run: pip install -r requirments.txt
 
-      - name: install linter
-        run: pip install flake8
+      - name: run tests
+        run: pytest -v
 
       - name: run linter
         run: flake8 .
+
+      - name: Build Docker image
+        run: docker build -t devops-python-app .
