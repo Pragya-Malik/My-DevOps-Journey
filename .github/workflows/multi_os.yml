@@ -36,4 +36,4 @@ jobs:
 
       - name: Build Docker image
         if: runner.os == 'Linux'
-        run: docker build -t devops-python-app -f Docker/Delish-Project-docker-.../dockerfile .
+        run: docker build -t devops-python-app -f Docker/Delish-Project-docker-updates/dockerfile .
