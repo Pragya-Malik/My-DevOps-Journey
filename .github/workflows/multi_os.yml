@@ -35,4 +35,5 @@ jobs:
         run: flake8 .
 
       - name: Build Docker image
+        if: runner.os == 'Linux'
         run: docker build -t devops-python-app .
