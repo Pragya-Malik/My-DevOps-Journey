@@ -1,10 +1,12 @@
-# pip-audit
 name: Dependency Scan
+
 on:
   workflow_call:
+
 jobs:
   dependency-scan:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
