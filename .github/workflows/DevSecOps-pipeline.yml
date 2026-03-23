@@ -6,24 +6,24 @@ on:
 jobs:
   DevSecOps-pipeline:
     runs-on: ubuntu-latest
-    steps:
-      code-quality:
-        uses: .github\workflows\code-quality.yml
 
-      secrets-scan:
-        uses: .github\workflows\secrets-scan.yml
+    code-quality:
+      uses: .github\workflows\code-quality.yml
 
-      dependency-scan:
-        uses: .github\workflows\dependency-scan.yml
+    secrets-scan:
+      uses: .github\workflows\secrets-scan.yml
 
-      docker-lint:
-        uses: .github\workflows\docker-lint.yml
+    dependency-scan:
+      uses: .github\workflows\dependency-scan.yml
 
-      build-push:
-        uses: .github\workflows\build-push.yml
+    docker-lint:
+      uses: .github\workflows\docker-lint.yml
 
-      image-scan:
-        uses: .github\workflows\image-scan.yml
+    build-push:
+      uses: .github\workflows\build-push.yml
 
-      deploy-on-server:
-        uses: .github\workflows\deploy-on-server.yml
+    image-scan:
+      uses: .github\workflows\image-scan.yml
+
+    deploy-on-server:
+      uses: .github\workflows\deploy-on-server.yml
