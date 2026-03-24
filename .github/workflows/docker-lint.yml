@@ -15,4 +15,4 @@ jobs:
       - name: Validate Dockerfile
         uses: hadolint/hadolint-action@v3.1.0
         with:
-          dockerfile: C:\Users\Pragya Malik\OneDrive\python-for-devops\GitHub-Actions\My-DevOps-Journey\Docker\Delish-Project-docker-updates\dockerfile
+          dockerfile: Dockerfile
