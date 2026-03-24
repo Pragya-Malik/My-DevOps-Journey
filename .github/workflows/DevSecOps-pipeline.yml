@@ -4,26 +4,26 @@ on:
   workflow_dispatch:
 
 jobs:
-  DevSecOps-pipeline:
-    runs-on: ubuntu-latest
+  code-quality:
+    uses: ./.github/workflows/code-quality.yml
 
-    code-quality:
-      uses: .github\workflows\code-quality.yml
+  secrets-scan:
+    uses: ./.github/workflows/secrets-scan.yml
 
-    secrets-scan:
-      uses: .github\workflows\secrets-scan.yml
+  dependency-scan:
+    uses: ./.github/workflows/sxdependency-scan.yml
 
-    dependency-scan:
-      uses: .github\workflows\dependency-scan.yml
+  docker-lint:
+    uses: ./.github/workflows/docker-lint.yml
 
-    docker-lint:
-      uses: .github\workflows\docker-lint.yml
+  build-push:
+    needs: docker-lint
+    uses: ./.github/workflows/build-push.yml
 
-    build-push:
-      uses: .github\workflows\build-push.yml
+  image-scan:
+    needs: build-push
+    uses: ./.github/workflows/image-scan.yml
 
-    image-scan:
-      uses: .github\workflows\image-scan.yml
-
-    deploy-on-server:
-      uses: .github\workflows\deploy-on-server.yml
+  deploy-on-server:
+    needs: image-scan
+    uses: ./.github/workflows/deploy-on-server.yml
