@@ -23,6 +23,6 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ vars.DOCKERHUB_USERNAME }}/github-actions-app:${{ github.ref_name }}
-            ${{ vars.DOCKERHUB_USERNAME }}/github-actions-app:latest
-            ${{ vars.DOCKERHUB_USERNAME }}/github-actions-app:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USER }}/github-actions-app:${{ github.ref_name }}
+            ${{ secrets.DOCKERHUB_USER }}/github-actions-app:latest
+            ${{ secrets.DOCKERHUB_USER }}/github-actions-app:${{ github.sha }}
