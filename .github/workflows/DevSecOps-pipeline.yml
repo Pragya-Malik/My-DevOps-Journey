@@ -8,11 +8,9 @@ jobs:
     uses: ./.github/workflows/code-quality.yml
 
   secrets-scan:
-    needs: code-quality
     uses: ./.github/workflows/secrets-scan.yml
 
   dependency-scan:
-    needs: code-quality
     uses: ./.github/workflows/dependency-scan.yml
 
   docker-lint:
