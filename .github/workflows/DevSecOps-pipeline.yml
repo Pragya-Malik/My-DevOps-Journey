@@ -8,11 +8,11 @@ jobs:
     uses: ./.github/workflows/code-quality.yml
 
   secrets-scan:
-    name: code-quality
+    needs: code-quality
     uses: ./.github/workflows/secrets-scan.yml
 
   dependency-scan:
-    name: code-quality
+    needs: code-quality
     uses: ./.github/workflows/dependency-scan.yml
 
   docker-lint:
@@ -27,6 +27,7 @@ jobs:
   image-scan:
     needs: build-push
     uses: ./.github/workflows/image-scan.yml
+    secrets: inherit
 
   deploy-on-server:
     needs: image-scan
