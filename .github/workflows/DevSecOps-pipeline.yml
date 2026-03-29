@@ -14,11 +14,13 @@ jobs:
     uses: ./.github/workflows/dependency-scan.yml
 
   docker-lint:
+    needs: [code-quality, secrets-scan, dependency-scan]
     uses: ./.github/workflows/docker-lint.yml
 
   build-push:
     needs: docker-lint
     uses: ./.github/workflows/build-push.yml
+    secrets: inherit
 
   image-scan:
     needs: build-push
